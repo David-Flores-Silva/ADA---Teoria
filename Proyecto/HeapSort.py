@@ -31,7 +31,7 @@ def siftDown(lst, i, upper):
         else:
             break
 
-def HeapSort(lst):
+def heapsort(lst):
     for j in range((len(lst)-2)//2, -1 , -1):
         siftDown(lst, j, len(lst))
 
@@ -40,7 +40,7 @@ def HeapSort(lst):
         siftDown(lst, 0, end)
 
 lst = [2, 6, 5, 1, 3, 4]
-HeapSort(lst)
+heapsort(lst)
 print(lst)
 
 
