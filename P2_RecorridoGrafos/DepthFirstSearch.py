@@ -42,7 +42,7 @@ class Graph:
         
     def print_graph(self):
         for key in sorted(list(self.vertices.keys())):
-            print(key + str(self.vertices[key].neighbors) + "  " + str(self.vertices[key].neighbors))
+            print(key + str(self.vertices[key].neighbors) + "    " + str(self.vertices[key].discovery) + "/" +str(self.vertices[key].finish))
         
     def _dfs(self, vertex):
         global time
@@ -71,7 +71,7 @@ a = Vertex("A")
 g.add_vertex(a)
 g.add_vertex(Vertex("B"))
 
-for i in range(ord("A"), ord("k")):
+for i in range(ord("A"), ord("K")):
     g.add_vertex(Vertex(chr(i)))
     
 edges = ["AB", "AE", "BF", "CG", "DE", "DH", "EH", "FG", "FI", "FJ", "GJ", "HI"]
